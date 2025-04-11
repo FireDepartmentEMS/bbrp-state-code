@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Universal Search | San Andreas Criminal Code</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    
+    <h1>San Andreas Criminal Code</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="title1.html">Title 1</a>
+    <a href="search.html"><strong>Search All Titles</strong></a>
+  </nav>
+  <main>
+    <input type="text" id="globalSearch" placeholder="Search all titles..." />
+    <div id="results"></div>
+  </main>
+  <script>
+    const laws = [
+      {
+        statute: "§ 101.010",
+        title: "Name of Code",
+        substance: "This body of law shall be cited as the San Andreas Criminal Code, abbreviated as SACC.",
+        file: "title1.html"
+      },
+      {
+        statute: "§ 101.020",
+        title: "Definitions",
+        substance: "For the purposes of this Code, 'person' includes individuals, corporations, and entities recognized by law.",
+        file: "title1.html"
+      },
+      {
+        statute: "§ 102.010",
+        title: "Categories of Offenses",
+        substance: "Criminal offenses are classified from Misdemeanor to Category A Felony based on severity.",
+        file: "title1.html"
+      },
+      {
+        statute: "§ 102.020",
+        title: "Scaled Sentencing for RP",
+        substance: "Each classification corresponds to in-game time in seconds ranging from 15 to 120, increasing with severity.",
+        file: "title1.html"
+      }
+    ];
+
+    const input = document.getElementById("globalSearch");
+    const results = document.getElementById("results");
+
+    input.addEventListener("input", () => {
+      const query = input.value.toLowerCase();
+      results.innerHTML = "";
+      if (query.length === 0) return;
+
+      const filtered = laws.filter(law =>
+        law.statute.toLowerCase().includes(query) ||
+        law.title.toLowerCase().includes(query) ||
+        law.substance.toLowerCase().includes(query)
+      );
+
+      filtered.forEach(law => {
+        const div = document.createElement("div");
+        div.className = "statute-entry";
+        div.innerHTML = `
+          <h3>${law.statute} – ${law.title}</h3>
+          <p>${law.substance}</p>
+          <a href="${law.file}">View in Title</a>
+        `;
+        results.appendChild(div);
+      });
+    });
+  </script>
+</body>
+</html>

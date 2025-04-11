@@ -7,15 +7,11 @@ body {
   padding: 0;
 }
 header {
-  display: flex;
-  align-items: center;
+  text-align: center;
   background-color: #32374f;
   padding: 10px 20px;
 }
-header img {
-  height: 40px;
-  margin-right: 15px;
-}
+
 header h1 {
   font-size: 24px;
   color: #ffcc33;
