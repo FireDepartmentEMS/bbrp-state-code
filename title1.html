@@ -8,61 +8,53 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    
-    <h1>San Andreas Criminal Code</h1>
-  </header>
-  <nav>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="title1.html">Title 1</a>
-    </div>
-    <div class="search-container">
+  <div class="container">
+    <aside class="sidebar">
+      <h2>SACC</h2>
+      <nav>
+        <a href="index.html">🏠 Home</a>
+        <a href="title1.html" class="active">📖 Title 1</a>
+        <a href="search.html">🔍 Search</a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <h1>Title 1 – General Provisions</h1>
       <input type="text" id="searchBar" placeholder="Search Title 1...">
-    </div>
-  </nav>
-  <main id="statuteContainer">
-  
-    <div class="statute-entry">
-      <h3>§ 101.010 – Name of Code</h3>
-      <p>This body of law shall be cited as the San Andreas Criminal Code, abbreviated as SACC.</p>
-    </div>
-    
-    <div class="statute-entry">
-      <h3>§ 101.020 – Definitions</h3>
-      <p>For the purposes of this Code, 'person' includes individuals, corporations, and entities recognized by law.</p>
-    </div>
-    
-    <div class="statute-entry">
-      <h3>§ 102.010 – Categories of Offenses</h3>
-      <p>Criminal offenses are classified from Misdemeanor to Category A Felony based on severity.</p>
-    </div>
-    
-    
-<div class="statute-entry">
-  <h3>§ 102.020 – Scaled Sentencing for RP</h3>
-  <p>Each classification corresponds to in-game time in seconds ranging from 15 to 120, increasing with severity. See the sentencing scale below:</p>
-  <table style="width:100%; background:#1c1c1c; color:#f9f9f9; border-collapse: collapse;">
-    <thead>
-      <tr style="background-color:#36468f;">
-        <th style="padding: 10px; border: 1px solid #555;">Classification</th>
-        <th style="padding: 10px; border: 1px solid #555;">Max RP Time (seconds)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td style="padding: 10px; border: 1px solid #555;">Misdemeanor</td><td style="padding: 10px; border: 1px solid #555;">15</td></tr>
-      <tr><td style="padding: 10px; border: 1px solid #555;">Gross Misdemeanor</td><td style="padding: 10px; border: 1px solid #555;">25</td></tr>
-      <tr><td style="padding: 10px; border: 1px solid #555;">Category E Felony</td><td style="padding: 10px; border: 1px solid #555;">40</td></tr>
-      <tr><td style="padding: 10px; border: 1px solid #555;">Category D Felony</td><td style="padding: 10px; border: 1px solid #555;">55</td></tr>
-      <tr><td style="padding: 10px; border: 1px solid #555;">Category C Felony</td><td style="padding: 10px; border: 1px solid #555;">70</td></tr>
-      <tr><td style="padding: 10px; border: 1px solid #555;">Category B Felony</td><td style="padding: 10px; border: 1px solid #555;">95</td></tr>
-      <tr><td style="padding: 10px; border: 1px solid #555;">Category A Felony</td><td style="padding: 10px; border: 1px solid #555;">120</td></tr>
-    </tbody>
-  </table>
-</div>
-
-    
-  </main>
+      <div class="statute-entry">
+        <h3>§ 101.010 – Name of Code</h3>
+        <p>This body of law shall be cited as the San Andreas Criminal Code, abbreviated as SACC.</p>
+      </div>
+      <div class="statute-entry">
+        <h3>§ 101.020 – Definitions</h3>
+        <p>For the purposes of this Code, 'person' includes individuals, corporations, and entities recognized by law.</p>
+      </div>
+      <div class="statute-entry">
+        <h3>§ 102.010 – Categories of Offenses</h3>
+        <p>Criminal offenses are classified from Misdemeanor to Category A Felony based on severity.</p>
+      </div>
+      <div class="statute-entry">
+        <h3>§ 102.020 – Scaled Sentencing for RP</h3>
+        <p>Each classification corresponds to in-game time in seconds ranging from 15 to 120, increasing with severity. See the sentencing scale below:</p>
+        <table style="width:100%; background:#1c1c1c; color:#f9f9f9; border-collapse: collapse;">
+          <thead>
+            <tr style="background-color:#36468f;">
+              <th style="padding: 10px; border: 1px solid #555;">Classification</th>
+              <th style="padding: 10px; border: 1px solid #555;">Max RP Time (seconds)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding: 10px; border: 1px solid #555;">Misdemeanor</td><td style="padding: 10px; border: 1px solid #555;">15</td></tr>
+            <tr><td style="padding: 10px; border: 1px solid #555;">Gross Misdemeanor</td><td style="padding: 10px; border: 1px solid #555;">25</td></tr>
+            <tr><td style="padding: 10px; border: 1px solid #555;">Category E Felony</td><td style="padding: 10px; border: 1px solid #555;">40</td></tr>
+            <tr><td style="padding: 10px; border: 1px solid #555;">Category D Felony</td><td style="padding: 10px; border: 1px solid #555;">55</td></tr>
+            <tr><td style="padding: 10px; border: 1px solid #555;">Category C Felony</td><td style="padding: 10px; border: 1px solid #555;">70</td></tr>
+            <tr><td style="padding: 10px; border: 1px solid #555;">Category B Felony</td><td style="padding: 10px; border: 1px solid #555;">95</td></tr>
+            <tr><td style="padding: 10px; border: 1px solid #555;">Category A Felony</td><td style="padding: 10px; border: 1px solid #555;">120</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
   <script>
     const searchBar = document.getElementById('searchBar');
     const statutes = document.querySelectorAll('.statute-entry');

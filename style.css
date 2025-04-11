@@ -51,3 +51,37 @@ input[type="text"] {
   margin-bottom: 10px;
   border-left: 4px solid #abbaff;
 }
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar {
+  width: 220px;
+  background-color: #32374f;
+  padding: 20px;
+  color: white;
+  flex-shrink: 0;
+}
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #ffcc33;
+}
+.sidebar nav {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar nav a {
+  color: white;
+  padding: 10px 0;
+  text-decoration: none;
+}
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  color: #abbaff;
+}
+.main-content {
+  flex-grow: 1;
+  padding: 30px;
+}
