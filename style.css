@@ -1,57 +1,10 @@
 
 body {
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #1c1c1c;
   color: #f9f9f9;
-  margin: 0;
-  padding: 0;
 }
-header {
-  text-align: center;
-  background-color: #32374f;
-  padding: 10px 20px;
-}
-
-header h1 {
-  font-size: 24px;
-  color: #ffcc33;
-  margin: 0;
-}
-nav {
-  background-color: #36468f;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-right: 15px;
-}
-nav a:hover {
-  text-decoration: underline;
-}
-main {
-  padding: 20px;
-}
-.search-container {
-  margin-top: 10px;
-}
-input[type="text"] {
-  padding: 8px;
-  width: 100%;
-  max-width: 400px;
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-.statute-entry {
-  background-color: #2a2f3a;
-  padding: 15px;
-  margin-bottom: 10px;
-  border-left: 4px solid #abbaff;
-}
-
 .container {
   display: flex;
   min-height: 100vh;
@@ -62,6 +15,8 @@ input[type="text"] {
   padding: 20px;
   color: white;
   flex-shrink: 0;
+  height: 100vh;
+  position: fixed;
 }
 .sidebar h2 {
   margin-top: 0;
@@ -82,6 +37,20 @@ input[type="text"] {
   color: #abbaff;
 }
 .main-content {
-  flex-grow: 1;
+  margin-left: 220px;
   padding: 30px;
+  width: 100%;
+}
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+.statute-entry {
+  background-color: #2a2f3a;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-left: 4px solid #abbaff;
 }
