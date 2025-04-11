@@ -9,11 +9,20 @@
 </head>
 <body>
   <header>
-    <h1>Title 1 – General Provisions</h1>
-    <p><a href="index.html">← Back to Home</a></p>
+    <img src="BattleBornRP.PNG" alt="BattleBorn RP Logo" />
+    <h1>San Andreas Criminal Code</h1>
   </header>
-  <main>
-
+  <nav>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="title1.html">Title 1</a>
+    </div>
+    <div class="search-container">
+      <input type="text" id="searchBar" placeholder="Search Title 1...">
+    </div>
+  </nav>
+  <main id="statuteContainer">
+  
     <div class="statute-entry">
       <h3>§ 101.010 – Name of Code</h3>
       <p>This body of law shall be cited as the San Andreas Criminal Code, abbreviated as SACC.</p>
@@ -35,5 +44,15 @@
     </div>
     
   </main>
+  <script>
+    const searchBar = document.getElementById('searchBar');
+    const statutes = document.querySelectorAll('.statute-entry');
+    searchBar.addEventListener('input', () => {
+      const query = searchBar.value.toLowerCase();
+      statutes.forEach(entry => {
+        entry.style.display = entry.innerText.toLowerCase().includes(query) ? '' : 'none';
+      });
+    });
+  </script>
 </body>
 </html>
