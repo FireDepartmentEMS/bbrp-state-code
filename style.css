@@ -1,0 +1,38 @@
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: #32374f;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+main {
+  padding: 20px;
+}
+.title-list {
+  list-style-type: none;
+  padding: 0;
+}
+.title-list li {
+  margin: 10px 0;
+}
+.title-list a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #36468f;
+}
+.title-list a:hover {
+  text-decoration: underline;
+}
+.statute-entry {
+  background: white;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-left: 4px solid #36468f;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
